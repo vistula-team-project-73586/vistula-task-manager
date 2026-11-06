@@ -147,9 +147,32 @@ The following operations were tested successfully:
 - Deleting a task.
 - Verifying that task data persists in the Supabase database.
 
-## 8. Repository
+## 8. Repository and links
+
+**GitHub account:** vistula-team-project-73586
 
 **GitHub:** https://github.com/vistula-team-project-73586/vistula-task-manager
+
+**Live app:** https://vistula-team-project-73586.github.io/vistula-task-manager/
+
+**Contributor page:** https://vistula-team-project-73586.github.io/vistula-task-manager/contribution.html
+
+**Contributor JSON:** https://vistula-team-project-73586.github.io/vistula-task-manager/contribution.json
+
+## 9. Team Collaboration
+
+This project was completed with a collaboration
+between two Vistula students.
+
+### Pull Requests
+
+1. My contribution to my teammate's repository:
+   [View Pull Request](https://github.com/vistula-team-project-72865/vistula-task-manager/pull/1)
+
+2. My teammate's contribution to my repository:
+   [View Pull Request](https://github.com/vistula-team-project-73586/vistula-task-manager/pull/1)
+
+Both Pull Requests were merged successfully.
 
 ---
 
