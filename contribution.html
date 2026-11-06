@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Team Contribution</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 600px; margin: 40px auto; padding: 0 16px; color: #1f2933; }
+    button { font: inherit; padding: 8px 14px; border: 0; border-radius: 6px; background: #2563eb; color: #fff; cursor: pointer; }
+    #contributor-student-id { margin: 16px 0; font-size: 1.1em; min-height: 1.4em; }
+    .error { color: #b91c1c; }
+  </style>
+</head>
+<body>
+  <h1>Team Contribution</h1>
+
+  <button type="button" id="load-contributor">Show Contributor</button>
+
+  <p id="contributor-student-id"></p>
+
+  <p><a href="index.html">Back to Task Manager</a></p>
+
+  <script>
+    document.getElementById('load-contributor').addEventListener('click', async () => {
+      const output = document.getElementById('contributor-student-id');
+      try {
+        const res = await fetch('contribution.json', { cache: 'no-store' });
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        const data = await res.json();
+        output.className = '';
+        output.textContent = 'Contributor Student ID: ' + data.contributorStudentId;
+      } catch (err) {
+        output.className = 'error';
+        output.textContent = 'Could not load contributor: ' + err.message;
+      }
+    });
+  </script>
+</body>
+</html>
